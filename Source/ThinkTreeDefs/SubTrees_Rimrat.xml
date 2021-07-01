@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThinkTreeDef>
+    <defName>Curiosity</defName>
+    <thinkRoot Class="Rimrats.ThinkNode_ConditionalRimrat">
+      <subNodes>
+        <li Class="ThinkNode_Priority">
+          <subNodes>
+            <li Class="Rimrats.JobGiver_Curiosity" />
+            <li Class="JobGiver_WanderAnywhere" />
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>
