@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <Operation Class="PatchOperationInsert">
+    <xpath>/Defs/ThinkTreeDef[defName = "Animal"]/thinkRoot/subNodes/li[@Class="ThinkNode_SubtreesByTag" and insertTag="Animal_PreWander"]</xpath>
+    <value>
+      <li Class="Rimrats.ThinkNode_ConditionalRimrat">
+        <subNodes>
+          <li Class="Rimrats.JobGiver_Curiosity" />
+        </subNodes>
+      </li>
+    </value>
+  </Operation>
+</Patch>

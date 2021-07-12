@@ -16,7 +16,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=732346254
 	
 ![Image](https://i.imgur.com/NOW7jU1.png)
 
-Rimrats are a native animal to the rimworlds and pre-date the wars that had taken place there. During the wars, rimrats were used in experiments to produce bioengineered weapons that would run into enemy territory and explode upon death (now commonly known as the 'boomrats'). Unlike their boomrat counterparts, rimrats still die in a natural fashion and only pose a minor threat as 'pests' with a mischievous curiosity for electrical wires.
+Rimrats are a native animal to the rimworlds and pre-date the wars that had taken place there. During the wars, rimrats were used in experiments to produce bioengineered weapons that would run into enemy territory and explode upon death (now commonly known as the &apos;boomrats&apos;). Unlike their boomrat counterparts, rimrats still die in a natural fashion and only pose a minor threat as &apos;pests&apos; with a mischievous curiosity for electrical wires.
 
 ![Image](https://i.imgur.com/Rs6T6cr.png)
 
