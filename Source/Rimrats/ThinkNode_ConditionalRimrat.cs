@@ -3,32 +3,31 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace Rimrats
+namespace Rimrats;
+
+public class ThinkNode_ConditionalRimrat : ThinkNode_Conditional
 {
-    public class ThinkNode_ConditionalRimrat : ThinkNode_Conditional
+    private int curious = Random.Range(1, 1000);
+
+    public override ThinkNode DeepCopy(bool resolve = true)
     {
-        private int curious = Random.Range(1, 1000);
+        var thinkNode_ConditionalRimrat = (ThinkNode_ConditionalRimrat)base.DeepCopy(resolve);
+        thinkNode_ConditionalRimrat.curious = curious;
+        return thinkNode_ConditionalRimrat;
+    }
 
-        public override ThinkNode DeepCopy(bool resolve = true)
+    protected override bool Satisfied(Pawn pawn)
+    {
+        if (pawn.def.defName != "Rimrat")
         {
-            var thinkNode_ConditionalRimrat = (ThinkNode_ConditionalRimrat) base.DeepCopy(resolve);
-            thinkNode_ConditionalRimrat.curious = curious;
-            return thinkNode_ConditionalRimrat;
+            return true;
         }
 
-        protected override bool Satisfied(Pawn pawn)
+        if (pawn.training?.HasLearned(TrainableDefOf.Tameness) == true)
         {
-            if (pawn.def.defName != "Rimrat")
-            {
-                return true;
-            }
-
-            if (pawn.training?.HasLearned(TrainableDefOf.Tameness) == true)
-            {
-                return true;
-            }
-
-            return Rand.Value < curious;
+            return true;
         }
+
+        return Rand.Value < curious;
     }
 }
