@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <Operation Class="PatchOperationInsert">
+    <xpath>/Defs/BiomeDef/wildAnimals/Rat</xpath>
+    <value>
+      <Rimrat>1</Rimrat>
+    </value>
+  </Operation>
+</Patch>
