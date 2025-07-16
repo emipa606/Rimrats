@@ -8,6 +8,7 @@
       <MoveSpeed>4.0</MoveSpeed>
       <MarketValue>35</MarketValue>
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <Wildness>0.50</Wildness>
     </statBases>
     <tools>
       <li>
@@ -56,7 +57,6 @@
       <baseHungerRate>0.29</baseHungerRate>
       <foodType>OmnivoreRoughAnimal</foodType>
       <leatherDef>Leather_Light</leatherDef>
-      <wildness>0.50</wildness>
       <trainability>None</trainability>
       <petness>0.15</petness>
       <manhunterOnTameFailChance>0</manhunterOnTameFailChance>

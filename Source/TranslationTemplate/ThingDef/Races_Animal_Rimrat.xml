@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: rimrat -->
+  <Rimrat.label>rimrat</Rimrat.label>
+  <!-- EN: Rimrats are a native animal to the rimworlds and pre-date the wars that had taken place there. During the wars, rimrats were used in experiments to produce bioengineered weapons that would run into enemy territory and explode upon death (now commonly known as the 'boomrats'). Unlike their boomrat counterparts, rimrats still die in a natural fashion and only pose a minor threat as 'pests' with a mischievous curiosity for electrical wires. -->
+  <Rimrat.description>Rimrats are a native animal to the rimworlds and pre-date the wars that had taken place there. During the wars, rimrats were used in experiments to produce bioengineered weapons that would run into enemy territory and explode upon death (now commonly known as the 'boomrats'). Unlike their boomrat counterparts, rimrats still die in a natural fashion and only pose a minor threat as 'pests' with a mischievous curiosity for electrical wires.</Rimrat.description>
+  <!-- EN: left claw -->
+  <Rimrat.tools.left_claw.label>left claw</Rimrat.tools.left_claw.label>
+  <!-- EN: right claw -->
+  <Rimrat.tools.right_claw.label>right claw</Rimrat.tools.right_claw.label>
+  <!-- EN: head -->
+  <Rimrat.tools.head.label>head</Rimrat.tools.head.label>
+</LanguageData>

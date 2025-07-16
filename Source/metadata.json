@@ -2,5 +2,14 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "2",
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "Patches": true,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 3379,
+  "LinesOfXML": 6039,
+  "CodeBaseSize": 63,
+  "LastXmlCleaning": "2025-07-16T19:51:27.1670767+02:00",
+  "SocialImageSet": true,
+  "SearchTags": " pests"
 }
