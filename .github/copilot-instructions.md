@@ -1,47 +1,68 @@
-# Copilot Instructions for RimWorld Modding Project
+# GitHub Copilot Instructions for Rimrats (Continued) Mod
 
 ## Mod Overview and Purpose
 
-This RimWorld mod aims to enhance the gameplay experience by introducing a new set of behaviors for a custom creature known as the "Rimrat". The Rimrat mod focuses on adding depth and novelty to RimWorld's AI system, providing players with engaging and unpredictable interactions.
+**Mod Name:** Rimrats (Continued)  
+**Original Author:** Oblivionburn  
+**Current Maintainer:** [Your Name]
+
+The Rimrats (Continued) mod enhances the existing gameplay of RimWorld by reintroducing and optimizing the rimrat creature from the pre-war times on the rimworlds. The focus is on providing an immersive experience where rimrats exhibit more dynamic behavior and specific interactions with the game environment, notably targeting power cables rather than buildings.
 
 ## Key Features and Systems
 
-- **Curiosity Job System**: The mod introduces a new job giver, `JobGiver_Curiosity`, which empowers Rimrats to explore their environment driven by curiosity. This behavior is designed to make them more dynamic and less predictable.
-
-- **Building Interaction**: Utilizing `RimratBuildingTrashUtility`, Rimrats can interact with certain structures, possibly leading to changes or disruptions. This makes the environment feel more alive and responsive to Rimrat presence.
-
-- **Conditional Logic for Rimrats**: With `ThinkNode_ConditionalRimrat`, the behavior of Rimrats can be adjusted based on various conditions, creating more complex interaction patterns within the game world.
+- **Dynamic Behavior:** Rimrats prioritize fleeing, eating, and carrying out basic tasks over attacking, retaining the creature's naturalistic traits.
+- **Targeted Interactions:** Unlike the aggressive boomrat, rimrats specifically attack power cables, adding a unique pest element to gameplay.
+- **Improved Textures:** Updated visual elements to enhance the immersion and visual quality of the mod.
+- **Balancing Tamed Rimrats:** Once tamed, rimrats cease their attacks on power cables, providing a clear distinction between wild and domesticated rimrats.
+- **Biome-def and Thinktree Integration Patches:** Biome and behavioral definitions have been optimized using XML patches for better integration and performance.
 
 ## Coding Patterns and Conventions
 
-- **Class Naming**: Use PascalCase for class names (e.g., `JobGiver_Curiosity`, `ThinkNode_ConditionalRimrat`).
-
-- **Method Naming**: Adopt camelCase for method names, reflecting their function (though no specific methods are currently documented, this aligns with C# conventions).
-
-- **Static Classes**: Utilities that do not require instantiation should be implemented as static classes, like `RimratBuildingTrashUtility`.
+- Follow C# conventions with PascalCasing for method names and CamelCasing for local fields.
+- Maintain consistency with naming of classes and methods to reflect their purpose, such as `JobGiver_Curiosity` and `RimratBuildingTrashUtility`.
+- Keep methods concise, focusing on single responsibilities to ensure clean separation of concerns and easier readability.
 
 ## XML Integration
 
-- **Error Handling**: The current XML files contain parsing errors. Ensure XML files are well-formed and validated to avoid runtime issues.
-
-- **Mod Integration**: XML files typically define game assets, like Rimrat's characteristics or job definitions. Use XML Def files to complement C# scripts where customization of objects is needed.
+- Utilize XML files for defining specific mod elements:
+  - `Races_Animal_Rimrat.xml` contains animal characteristics and specific rimrat behavior definitions.
+  - `biome-patch.xml` and `thinktree-patch.xml` implement changes to native biomes and rimrat behavior trees, using RimWorld's patching conventions for XML definitions to avoid direct overrides.
 
 ## Harmony Patching
 
-- **Purpose**: Harmony patches are crucial for modifying or extending RimWorld's core functionality without directly altering the original game code.
-
-- **Implementation**: When using Harmony, create patches in a separate C# file, following the pattern of creating prefix, postfix, or transpiler methods as required. 
-
-- **Conventions**: Use descriptive naming for Harmony patches to clearly indicate what original method is being affected and why.
+- Consider using Harmony to modify existing game methods non-destructively. This allows for dynamic adjustment of game functions affecting rimrats without directly altering original game code.
+- Harmony patches should be well-documented within the codebase to indicate which classes and methods are being patched.
 
 ## Suggestions for Copilot
 
-- **Predictive Suggestions**: Copilot can be leveraged for auto-completing common method structures or accessing frequently used RimWorld API references.
+To generate code and content seamlessly with GitHub Copilot, consider the following suggestions:
 
-- **Error Resolution**: Utilize Copilot to identify and fix potential errors or code inefficiencies, especially in XML files and during Harmony patching.
+1. **Brevity and Clarity:**
+   - Write concise prompt comments before significant code sections to inform Copilot about the intended logic or system behavior.
 
-- **Code Comments**: Encourage Copilot to generate context-based comments that explain the purpose and logic of complex code segments, making the codebase easier to navigate for future contributors.
+2. **Descriptive Naming:**
+   - Use descriptive variable and method names that convey their functionality clearly, assisting Copilot in predicting the continuation more accurately.
 
-- **Pattern Recognition**: Enable Copilot to maintain consistency in coding patterns and naming conventions across the mod's development.
+3. **Frequent Documentation:**
+   - Regularly include XML styling comments for Copilot to understand the XML structure's intent and purpose, enhancing prediction accuracy for XML content creation.
 
-By adhering to these guidelines and utilizing Copilot effectively, you can streamline the development process while ensuring your mod is robust, compatible, and easy to maintain.
+4. **Pattern Reinforcement:**
+   - Incorporate noticeable patterns in method implementations to help Copilot recognize and follow these coding patterns effectively in the same class or across similar ones.
+
+By following these guidelines and suggestions, you can leverage GitHub Copilot to accelerate the development and maintenance of the Rimrats (Continued) mod while preserving high code-quality standards.
+
+## Project Solution Guidelines
+- Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
+- Use these in-solution XML files as the primary files for reference and modification.
+- The `.github/copilot-instructions.md` file is included in the solution under the `.github` solution folder, so it should be read/modified from within the solution instead of using paths outside the solution. Update this file once only, as it and the parent-path solution reference point to the same file in this workspace.
+- When making functional changes in this mod, ensure the documented features stay in sync with implementation; use the in-solution `.github` copy as the primary file.
+- In the solution is also a project called Assembly-CSharp, containing a read-only version of the decompiled game source, for reference and debugging purposes.
+- For any new documentation, update this copilot-instructions.md file rather than creating separate documentation files.
+
+
+## Hard rules (must follow)
+- Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
+- Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
+
